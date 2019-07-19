@@ -89,6 +89,9 @@
         sed '2i echo Skipping usage vs getopt test && exit 77' -i ./tests/misc/usage_vs_getopt.sh
       '';
     });
+    mpv-with-scripts = pkgs.mpv-with-scripts.override {
+      scripts = [pkgs.mpvScripts.mpris];
+    };
   };
   allowUnfree = true;
 }

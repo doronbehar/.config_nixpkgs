@@ -35,6 +35,10 @@
         python-slugify
       ]);
     };
+    gifsicle = pkgs.gifsicle.overrideAttrs (oldAttrs: rec {
+      buildInputs = with pkgs.xorg; [ xorgproto libXt libX11 ];
+      configureFlags = [];
+    });
     lua-lsp = pkgs.lua53Packages.lua-lsp.overrideAttrs (oldAttrs: rec {
       src = fetchgit {
         url = "https://github.com/doronbehar/lua-lsp.git";

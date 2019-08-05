@@ -14,8 +14,9 @@
       nativeBuildInputs = oldAttrs.nativeBuildInputs ++ [python];
       src = fetchgit {
         url = "https://github.com/doronbehar/polybar.git";
-        rev = "748e96f";
-        sha256 = "0w3572pkh5jac4f5854fw365mbr03vkv9sw3lkkfs5d84cnfgczy";
+        rev = "afddd2019b6998fd7c7234168bec540fac11a03c";
+        sha256 = "0pdm7z0k6rgllxby5r2xzq9bm49h09qkm4drkr685hr52w183rxc";
+        fetchSubmodules = true;
       };
       postConfigure = "";
     });

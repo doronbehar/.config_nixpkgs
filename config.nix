@@ -4,7 +4,6 @@
       buildInputs = [
         cairo xorg.libXdmcp xorg.libpthreadstubs xorg.libxcb pcre xorg.xcbproto xorg.xcbutil
         xorg.xcbutilcursor xorg.xcbutilimage xorg.xcbutilrenderutil xorg.xcbutilwm xcbutilxrm
-        python27
         alsaLib
         curl
         mpd_clientlib
@@ -12,6 +11,7 @@
         wirelesstools
         libnl
       ];
+      nativeBuildInputs = oldAttrs.nativeBuildInputs ++ [python];
       src = fetchgit {
         url = "https://github.com/doronbehar/polybar.git";
         rev = "748e96f";

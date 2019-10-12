@@ -3,6 +3,7 @@ self: super:
 {
   beets = super.beets.override {
     enableAcousticbrainz        = true;
+    enableAcousticbrainzSubmit  = true;
     enableAcoustid              = true;
     enableBadfiles              = false;
     enableConvert               = false;
